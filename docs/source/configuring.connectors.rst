@@ -73,6 +73,51 @@ model you wish to test and evaluate. ``target_model`` requires the following sub
 
 
 
+Gemini Connector
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To use AVISE with Google `Gemini <https://ai.google.dev/>`__ models, you can modify the existing ``avise/configs/connector/languagemodel/gemini.json``
+configuration file:
+
+.. code-block:: json
+   :caption: ``avise/configs/connector/languagemodel/gemini.json``
+
+    {
+        "target_model": {
+            "connector": "gemini-lm",
+            "type": "language_model",
+            "name": "gemini-2.5-flash",
+            "api_url": null,
+            "headers": null,
+            "api_key": "YOUR_GEMINI_API_KEY_HERE",
+            "max_tokens": 5000,
+            "completion_kwargs": {}
+        }
+    }
+
+You can create an API key in `Google AI Studio <https://aistudio.google.com/apikey>`__. Instead of writing the key
+into the configuration file, you can leave ``"api_key"`` empty (``""``) or ``null`` and set it as an environment variable:
+
+.. code-block:: bash
+
+   export GEMINI_API_KEY="YOUR_GEMINI_API_KEY_HERE"
+
+You can also use the predefined configuration path ``gemini_lm`` with the ``--connectorconf`` argument.
+
+In the Connector configuration files, ``target_model`` defines the configurations for the
+model you wish to test and evaluate. ``target_model`` accepts the following subfields:
+
+* ``"connector"``: Name of the connector to use (See available connectors by running CLI command ``avise --connector_list``)
+* ``"type"``: Type of the AI model *(e.g. language_model, continual_learning, multi_modal)*
+* ``"name"``: Name of the model. **Required.** *(For Gemini connector, use the Gemini model name, e.g.* ``gemini-2.5-flash`` *)*
+* ``"api_url"``: Optional URL for the API endpoint. **Leave as** ``null`` **to use the default Google GenAI endpoint.**
+* ``"headers"``: Optional headers for the API request.
+* ``"api_key"``: Gemini API key. If empty or ``null``, the key is read from the ``GEMINI_API_KEY`` environment variable.
+* ``"max_tokens"``: Optional maximum number of tokens to generate. Defaults to ``512``. Newer Gemini models count "thinking" tokens toward this limit, so a higher value (e.g. ``5000``) is recommended to avoid cut-off or empty responses.
+* ``"completion_kwargs"``: Optional extra generation settings passed to the Gemini API (e.g. ``{"top_p": 0.9}``). Defaults to ``{}``.
+
+
+
 Generic REST API Connector
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

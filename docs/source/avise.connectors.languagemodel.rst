@@ -33,3 +33,11 @@ avise.connectors.languagemodel.openai
    :members:
    :show-inheritance:
    :undoc-members:
+
+avise.connectors.languagemodel.gemini
+--------------------------------------------
+
+.. automodule:: avise.connectors.languagemodel.gemini
+   :members:
+   :show-inheritance:
+   :undoc-members:

@@ -171,7 +171,7 @@ Required Arguments
    * - ``--SET``, ``-s``
      - Security Evaluation Test to run (e.g., ``prompt_injection``, ``context_test``)
    * - ``--connectorconf``, ``-c``
-     - Path to Connector configuration JSON (Accepts predefined connector configuration paths: ``ollama_lm``, ``openai_lm``, ``genericrest_lm``)
+     - Path to Connector configuration JSON (Accepts predefined connector configuration paths: ``ollama_lm``, ``openai_lm``, ``genericrest_lm``, ``gemini_lm``)
 
 Optional Arguments
 ~~~~~~~~~~~~~~~~~~

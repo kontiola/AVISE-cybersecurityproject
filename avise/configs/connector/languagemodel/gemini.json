@@ -1,0 +1,12 @@
+{
+    "target_model": {
+        "connector": "gemini-lm",
+        "type": "language_model",
+        "name": "gemini-3.5-flash-lite",
+        "api_url": null,
+        "headers": null,
+        "api_key": "",
+        "max_tokens": 5000,
+        "completion_kwargs": {}
+    }
+}

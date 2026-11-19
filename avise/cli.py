@@ -55,6 +55,7 @@ DEFAULT_CONNECTOR_CONFIGS = {
     "genericrest_lm": "configs/connector/languagemodel/genericrest.json",
     "genericrest_cl": "configs/connector/continuallearning/genericrest.yaml",
     "lehmus_lm": "configs/connector/languagemodel/lehmus.yaml",
+    "gemini_lm": "configs/connector/languagemodel/gemini.json",
 }
 
 

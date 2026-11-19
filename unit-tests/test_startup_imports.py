@@ -18,6 +18,7 @@ HEAVY_MODULES = [
     "openai",
     "ollama",
     "scipy",
+    "google",
 ]
 
 # Imports the CLI and engine, which registers every SET, connector and evaluator.
