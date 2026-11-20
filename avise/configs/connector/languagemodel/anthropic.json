@@ -1,0 +1,10 @@
+{
+    "target_model": {
+        "connector": "anthropic-lm",
+        "type": "language_model",
+        "name": "claude-haiku-4-5",
+        "api_url": "https://api.anthropic.com/v1/messages",
+        "api_key": null,
+        "max_tokens": 1024
+    }
+}

@@ -4,6 +4,7 @@ from .openai import OpenAILMConnector
 from .generic import GenericRESTLMConnector
 from .lehmus_connector import LehmusLMConnector
 from .gemini import GeminiLMConnector
+from .anthropic import AnthropicLMConnector
 
 # Category name shown by `avise --connector-list`
 DISPLAY_NAME = "Language Model"
