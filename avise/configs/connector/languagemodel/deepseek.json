@@ -1,0 +1,12 @@
+{
+    "target_model": {
+        "connector": "deepseek-lm",
+        "type": "language_model",
+        "name": "deepseek-flash",
+        "api_url": "",
+        "headers": null,
+        "api_key": "",
+        "max_tokens": 5000,
+        "completion_kwargs": {}
+    }
+}
